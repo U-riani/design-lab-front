@@ -1,4 +1,3 @@
-import React from "react";
 import SpaceComponent from "../components/SpaceComponent";
 import { useParams } from "react-router-dom";
 import { useGetSingleNewsQuery } from "../data/newsSlice";

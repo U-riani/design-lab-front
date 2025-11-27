@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import SpaceComponent from "./SpaceComponent";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -9,7 +9,7 @@ const AboutUsComponent = () => {
   const { t, i18n } = useTranslation();
   const { localStorageData, syncLocalStorageData } = useLocalStorage();
 
-  const { data, isLoading, error } = useGetAboutUsMainPageQuery();
+  const { data } = useGetAboutUsMainPageQuery();
 
   useEffect(() => {
     if (data && data.length > 0) {

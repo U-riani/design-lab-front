@@ -1,9 +1,6 @@
-import React from "react";
-import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import AboutUsComponent from "../components/AboutUsComponent";
 import NewsComponent from "../components/NewsComponent";
 import { LastNewsProvider } from "../context/LastNewsContext";
-import PartnersComponent from "../components/PartnersComponent";
 
 const MainPage = () => {
   return (

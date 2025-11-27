@@ -1,4 +1,3 @@
-import React from "react";
 
 const SpaceComponent = ({ data = {data: "TITLE"} }) => {
   // console.log(data);

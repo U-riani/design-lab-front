@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   useDeleteDesignerMutation,
   useGetAllDesignersQuery,
@@ -33,6 +33,8 @@ const EditDesigners = () => {
   const [companyPerson, setCompanyPerson] = useState("");
   const [id, setId] = useState(null);
 
+  console.log(image);
+  
   const handleProfilePhotoChange = (e) => {
     setProfilePhoto(e.target.files[0]);
   };
@@ -140,21 +142,23 @@ const EditDesigners = () => {
               <div className="relative h-[200px]">
                 <div className="w-full h-[80%] bg-gray-200  overflow-hidden">
                   <img
-                    src={item.images[1] || '/images/notAvaliableImage.jpg'}
+                    src={item.images[1] || "/images/notAvaliableImage.jpg"}
                     alt="Project"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute aspect-[1/1] h-[40%] bottom-0 left-1/2 translate-x-[-50%]">
                   <img
-                    src={item.images[0] || '/images/notAvaliableImage.jpg'}
+                    src={item.images[0] || "/images/notAvaliableImage.jpg"}
                     alt="Profile"
                     className="w-full h-full rounded-full object-cover border-4 border-white shadow-md"
                   />
                 </div>
               </div>
               <div className="pt-5 pb-4">
-                <h3 className="text-xl font-bold">{item.name[i18n.language]}</h3>
+                <h3 className="text-xl font-bold">
+                  {item.name[i18n.language]}
+                </h3>
                 <p>{item.text[i18n.language]}</p>
                 <div className="flex space-x-2 mt-3">
                   <a
@@ -202,7 +206,10 @@ const EditDesigners = () => {
                     Active
                   </button>
                 ) : (
-                  <button className="px-4 py-2 bg-yellow-500 text-white rounded-md" disabled>
+                  <button
+                    className="px-4 py-2 bg-yellow-500 text-white rounded-md"
+                    disabled
+                  >
                     Not Active
                   </button>
                 )}

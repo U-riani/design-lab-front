@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect } from "react";
 import Slider from "react-slick";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useGetAllHerosQuery } from "../data/heroSlice";
 import { useLocalStorage } from "../context/LocalStorageContext";
-import { useTranslation } from "react-i18next";
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -46,9 +45,7 @@ function SampleNextArrow(props) {
 }
 
 const Hero = () => {
-  const [isSwipeEnabled, setIsSwipeEnabled] = useState(true); // State to control swipe behavior
   const { data } = useGetAllHerosQuery();
-  const { t, i18n } = useTranslation();
   const { localStorageData, syncLocalStorageData } = useLocalStorage();
 
   useEffect(() => {

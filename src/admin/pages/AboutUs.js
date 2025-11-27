@@ -27,6 +27,7 @@ const AboutUs = () => {
       formData.append("text[en]", enText);
       formData.append("text[ge]", geText);
       const response = await createAboutUs(formData);
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -61,7 +62,10 @@ const AboutUs = () => {
     <div className="p-6 bg-gray-100 min-h-screen">
       <h2 className="text-2xl font-bold mb-6">{t("Add About Us")}</h2>
       <div className="mb-6">
-        <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-2">
+        <label
+          htmlFor="image"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
           {t("Upload Images")}
         </label>
         <input

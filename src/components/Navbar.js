@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useScreenWidth from "../hooks/useScreenWidth";
@@ -8,7 +8,6 @@ const Navbar = () => {
 
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
 
   const [toggleLang, setTogglelang] = useState(
     localStorage.getItem("language") || i18n.language

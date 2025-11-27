@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import { useTranslation } from "react-i18next";
 
 const BeforeAfterSlider = (props) => {
-  const { t, i18n } = useTranslation();
+  const {  i18n } = useTranslation();
   const hoverRef = useRef(null);
   const [mouseMoveX, setMouseMoveX] = useState(1);
   const halfScreenWidth = window.innerWidth / 2;

@@ -7,7 +7,7 @@ import { useLocalStorage } from "../context/LocalStorageContext";
 import SpaceComponent from "../components/SpaceComponent";
 
 const NewsPage = () => {
-  const { data, isLoading, error } = useGetAllNewsQuery();
+  const { data, isLoading } = useGetAllNewsQuery();
   const { localStorageData, syncLocalStorageData } = useLocalStorage();
   const { t, i18n } = useTranslation();
 

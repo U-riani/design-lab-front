@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,7 +23,7 @@ const DesignersCard = ({ data }) => {
             <img
               className="w-full h-full object-cover"
               src={location === '/registration' && data.projectPhoto !== null ? URL.createObjectURL(data.projectPhoto) : data.images && data.images[1] ? data.images[1] : "/images/notAvaliableImage.jpg" }
-              alt="background image"
+              alt="background"
             />
           </div>
           <div className="card-profile-image absolute h-1/2 aspect-[1/1] bottom-0 left-1/2 translate-x-[-50%] rounded-full overflow-hidden border-2 border-white">

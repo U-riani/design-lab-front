@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SpaceComponent from "../components/SpaceComponent";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -19,7 +19,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const ReservationPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

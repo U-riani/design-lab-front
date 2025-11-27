@@ -8,8 +8,8 @@ const AddAboutUsMainPage = () => {
   const editorRefEn = useRef(null);
   const editorRefGe = useRef(null);
   const fileInputRef = useRef(null);
-  
-  const [createAboutUsMainPage]= useCreateAboutUsMainPageMutation();
+
+  const [createAboutUsMainPage] = useCreateAboutUsMainPageMutation();
   const [imageFile, setImageFile] = useState(null);
   const [imageFile2, setImageFile2] = useState(null);
 
@@ -31,6 +31,7 @@ const AddAboutUsMainPage = () => {
       formData.append("text[en]", enText);
       formData.append("text[ge]", geText);
       const response = await createAboutUsMainPage(formData);
+      console.log(response);
     } catch (error) {
       console.log(error);
     }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import he from "he";
 
 import { useGetAllNewsQuery } from "../../data/newsSlice";

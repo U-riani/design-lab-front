@@ -1,9 +1,7 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import FooterComponent from "../components/FooterComponent";
 import PartnersComponent from "../components/PartnersComponent";
-import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import Hero from "../components/Hero";
 import ScrollUp from "../components/ScrollUp";
 

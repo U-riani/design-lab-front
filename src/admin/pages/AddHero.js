@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import { useGetAllHerosQuery, useCreateHeroMutation } from "../../data/heroSlice";
+import { useState } from "react";
+import {
+  useGetAllHerosQuery,
+  useCreateHeroMutation,
+} from "../../data/heroSlice";
 
 const AddHero = () => {
   const { data: allHeros } = useGetAllHerosQuery();
@@ -9,6 +12,8 @@ const AddHero = () => {
   const [text, setText] = useState({ ge: "", en: "" });
   const [statusMessage, setStatusMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  console.log(allHeros);
 
   const handleImageChange = (e) => {
     setImageFile(e.target.files[0]);
@@ -26,7 +31,10 @@ const AddHero = () => {
 
   const handleSubmit = async () => {
     if (!text.ge || !text.en) {
-      setStatusMessage({ type: "error", text: "Please fill in both text fields." });
+      setStatusMessage({
+        type: "error",
+        text: "Please fill in both text fields.",
+      });
       return;
     }
     if (!imageFile) {
@@ -69,7 +77,10 @@ const AddHero = () => {
       )}
 
       <div className="mb-4">
-        <label htmlFor="add-image" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="add-image"
+          className="block text-sm font-medium text-gray-700"
+        >
           Add Image 1
         </label>
         <input
@@ -80,7 +91,10 @@ const AddHero = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="add-image" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="add-image"
+          className="block text-sm font-medium text-gray-700"
+        >
           Add Image 2
         </label>
         <input
@@ -92,7 +106,10 @@ const AddHero = () => {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="add-ge-text" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="add-ge-text"
+          className="block text-sm font-medium text-gray-700"
+        >
           Add Georgian Text
         </label>
         <input
@@ -105,7 +122,10 @@ const AddHero = () => {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="add-en-text" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="add-en-text"
+          className="block text-sm font-medium text-gray-700"
+        >
           Add English Text
         </label>
         <input
@@ -122,7 +142,9 @@ const AddHero = () => {
           onClick={handleSubmit}
           disabled={isLoading}
           className={`px-4 py-2 font-medium text-white rounded shadow-sm ${
-            isLoading ? "bg-blue-300 cursor-not-allowed" : "bg-green-600 hover:bg-blue-700"
+            isLoading
+              ? "bg-blue-300 cursor-not-allowed"
+              : "bg-green-600 hover:bg-blue-700"
           }`}
         >
           {isLoading ? (

@@ -7,10 +7,10 @@ import DesignersCard from "../components/DesignersCard";
 import { useLocalStorage } from "../context/LocalStorageContext";
 
 const DesignersPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { localStorageData, syncLocalStorageData } = useLocalStorage();
 
-  const { data, isLoading, error } = useGetAllDesignersQuery();
+  const { data } = useGetAllDesignersQuery();
   const [activeDesigners, setActiveDesigners] = useState([]);
 
   useEffect(() => {

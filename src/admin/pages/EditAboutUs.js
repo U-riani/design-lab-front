@@ -1,5 +1,4 @@
 import React, { useState, useRef, Suspense, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import {
   useGetAboutUsQuery,
   useUpdateAboutUsMutation,
@@ -22,7 +21,7 @@ const EditAboutUs = () => {
 
   const fileInputRef = useRef(null);
 
-  const { t } = useTranslation();
+  console.log(isLoading, error);
 
   useEffect(() => {
     refetch();
@@ -104,7 +103,10 @@ const EditAboutUs = () => {
         </div>
       </div>
       <div className="mb-6">
-        <label htmlFor="image" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="image"
+          className="block text-sm font-medium text-gray-700"
+        >
           Upload Images
         </label>
         <input

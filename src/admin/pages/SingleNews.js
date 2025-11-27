@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import { useState, Suspense, lazy } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useGetSingleNewsQuery, useDeleteNewsMutation } from "../../data/newsSlice";
 import { useTranslation } from "react-i18next";

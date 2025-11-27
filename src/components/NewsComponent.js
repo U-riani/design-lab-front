@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import StackCardsSlider from "./StackCardsSlider";
 // import { LastNewsContext } from "../context/LastNewsContext";

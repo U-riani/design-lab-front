@@ -1,4 +1,4 @@
-import React, { useState, useRef, Suspense, lazy } from "react";
+import { useState, useRef, Suspense, lazy } from "react";
 import { useCreateNewsMutation } from "../../data/newsSlice";
 import { useTranslation } from "react-i18next";
 

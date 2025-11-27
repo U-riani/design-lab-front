@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SpaceComponent from "../components/SpaceComponent";
 import { useGetAllPartnersQuery } from "../data/partnersSlice";
 import useScreenWidth from "../hooks/useScreenWidth";
@@ -6,12 +6,12 @@ import { useLocalStorage } from "../context/LocalStorageContext";
 import { useTranslation } from "react-i18next";
 
 const PartnersPage = () => {
-  const { data, isLoading, error } = useGetAllPartnersQuery();
-  const [partnersLength, setPartnersLength] = useState(1);
+  const { data } = useGetAllPartnersQuery();
+  // const [partnersLength, setPartnersLength] = useState(1);
   const [rowNum, setRowNum] = useState(1);
   const [colNum, setColNum] = useState(1);
   const screenWidth = useScreenWidth();
-
+  console.log(rowNum, colNum);
   const { localStorageData, syncLocalStorageData } = useLocalStorage();
   const { t, i18n } = useTranslation();
 

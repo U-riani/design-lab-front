@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SpaceComponent from "../components/SpaceComponent";
 import { useGetAboutUsQuery } from "../data/aboutUsSlice";
 import { useLocalStorage } from "../context/LocalStorageContext";

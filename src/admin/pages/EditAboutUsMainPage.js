@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useState, useRef, useEffect } from "react";
 import {
   useGetAboutUsMainPageQuery,
   useUpdateAboutUsMainPageMutation,
@@ -11,8 +10,6 @@ const EditAboutUsMainPage = () => {
   const { data, isLoading, error, refetch } = useGetAboutUsMainPageQuery();
   const [updateAboutUsMainPage] = useUpdateAboutUsMainPageMutation();
 
-  const editorRefEn = useRef(null);
-  const editorRefGe = useRef(null);
   const [editorContentGe, setEditorContentGe] = useState("");
   const [editorContentEn, setEditorContentEn] = useState("");
   const [imageFile, setImageFile] = useState(null);
@@ -24,7 +21,7 @@ const EditAboutUsMainPage = () => {
 
   const fileInputRef = useRef(null);
 
-  const { t } = useTranslation();
+  console.log(isLoading, error);
 
   useEffect(() => {
     refetch();

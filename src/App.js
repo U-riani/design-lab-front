@@ -1,8 +1,6 @@
-import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import { LocalStorageProvider } from "./context/LocalStorageContext"; // Adjust path as needed
-import FooterComponent from "./components/FooterComponent";
 import Layout from "./Layout/Layout";
 import AboutUsPage from "./pages/AboutUsPage";
 import NewsPage from "./pages/NewsPage";

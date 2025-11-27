@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import {
-  useGetAllPartnersQuery,
   useCreatePartnerMutation,
 } from "../../data/partnersSlice";
 
 const AddPartners = () => {
-  const { data: allPartners } = useGetAllPartnersQuery();
+  // const { data: allPartners } = useGetAllPartnersQuery();
   const [createPartner] = useCreatePartnerMutation();
   const [imageFile, setImageFile] = useState(null);
   const [text, setText] = useState({ ge: "", en: "" });
