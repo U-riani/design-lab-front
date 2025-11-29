@@ -33,6 +33,8 @@ import AllReservations from "./admin/pages/AllReservations";
 import Registration from "./pages/Registration";
 import ScrollToTop from "./hooks/ScrollToTop";
 import MemberPage from "./pages/MemberPage";
+import RegistrationEducation from "./pages/RegistrationEducationPage";
+import RegistrationPayPage from "./pages/RegistrationPayPage";
 
 
 function App() {
@@ -124,9 +126,12 @@ function App() {
               <Route path="partners" element={<PartnersPage />} />
               <Route path="designers" element={<DesignersPage />} />
               <Route path="registration" element={<Registration />} />
+              <Route path="registration-education" element={<RegistrationEducation />} />
+              <Route path="registration-pay" element={<RegistrationPayPage />} />
               <Route path="contact" element={<ContactPage />} />
               <Route path="reservation" element={<ReservationPage />} />
               <Route path="membership" element={<MemberPage />} />
+              
             </Route>
           </Routes>
         </Router>

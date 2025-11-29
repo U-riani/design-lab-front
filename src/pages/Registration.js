@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import SpaceComponent from "../components/SpaceComponent";
 import DesignersCard from "../components/DesignersCard";
 import { useCreateDesignerMutation } from "../data/designersSlice";
+import ProgressTimeLIneComponent from "../components/ProgressTimeLIneComponent";
 
 const Registration = () => {
   const maxSize = 10 * 1024 * 1024;
@@ -77,7 +78,10 @@ const Registration = () => {
   return (
     <div className="container mx-auto">
       <SpaceComponent data={{ data: t("registration") }} className="w-full" />
-      <div className="flex justify-center py-8">
+      <div className="flex flex-col items-center justify-center py-8">
+        <div className="w-full mb-5"> 
+          <ProgressTimeLIneComponent progressData={1}/>
+        </div>
         <form className="w-full max-w-2xl lg:max-w-[800px] space-y-6 bg-white p-6 rounded-lg shadow-md">
           <div className="lg:flex lg:items-center lg:justify-between space-y-[20px] lg:space-y-0 lg:space-x-[20px]">
             {" "}
